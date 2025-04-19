@@ -130,3 +130,27 @@
   .service-container .service-heading::before{
     top: 0;
   }
+
+   /* Contact-us styles */
+
+   section.contact-section{
+    min-height: 200px;
+    height: calc(100vh - 49px);
+}
+
+.contact-button-container{
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+}
+
+section.contact-section button:first-child{
+    border-radius: 5px 5px 0 0;
+}
+section.contact-section button:last-child{
+    border-radius: 0 0 5px 5px;
+}
+
+/* contact-us styles ends here */

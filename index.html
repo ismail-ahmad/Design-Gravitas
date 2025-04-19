@@ -150,6 +150,58 @@
 
     /* Common Footer section styles ends here */
 
+    /* Common contact us section styles ends here */
+
+    section.contact-section{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0 16px;
+        gap: 50px;
+        height: calc(100vh - 49px);
+    }
+    section.contact-section .contact-heading{
+        text-align: center;
+        font-size: var(--h1-font-size);
+        width: 100%;
+    }
+    section.contact-section .contact-container{
+        width: calc(100vw/12*8 - 32px);
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 50px;
+        
+        
+    }
+    .contact-button-container{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        width: 100%;
+        gap: 25%;
+    }
+    section.contact-section p{
+        width: 100%;
+        text-align: center;
+    }
+    section.contact-section button{
+        border: none;
+        background-color: var(--blue);
+        color: white;
+        padding: 8px 16px;
+        font-family: var(--body-text);
+        width: 200px;
+        cursor: pointer;
+    }
+    section.contact-section button:first-child{
+        border-radius: 0 15px;
+    }
+    section.contact-section button:last-child{
+        border-radius: 15px 0;
+    }
+    /* Common contact us section styles ends here */
+
     
     @media only screen and (max-width: 576px) {
       body{
@@ -290,6 +342,31 @@
   }
 
     /* footer styles for mobile ends here */
+
+
+    /* Contact-us styles */
+
+    section.contact-section{
+        min-height: 200px;
+        height: calc(100vh - 49px);
+    }
+
+    .contact-button-container{
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 16px;
+    }
+
+    section.contact-section button:first-child{
+        border-radius: 5px 5px 0 0;
+    }
+    section.contact-section button:last-child{
+        border-radius: 0 0 5px 5px;
+    }
+
+    /* contact-us styles ends here */
     }
   </style>
   <link rel="stylesheet" href="styles/tablet-styles.css" media="only screen and (max-width:768px) and (min-width:577px)">
@@ -390,13 +467,27 @@
       </div>
     </section>
     <!-- services section end -->
-    <!-- footer section end -->
+    <!-- contact us section starts here -->
+
+    <section class="contact-section">
+        <h2 class="contact-heading">Contact</h2>
+        <div class="contact-container">
+            <p>Reach out to us on the following email or schedule a quick discovery call with us</p>
+            <div class="contact-button-container">
+                <button onclick="window.location.href='mailto:ismailahmad0505@gmail.com'" class="contact-us button">Write to us!</button>
+                <button class="contact-us button">Schedule a Meeting</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact us section ends here -->
+    <!-- footer section starts here -->
     <footer>
         <div class="footer-heading">
             <p>© 2025 Design Gravitas All rights reserved.</p>
         </div>
     </footer>
-    <!-- footer section end -->
+    <!-- footer section ends here -->
   </main>
   <script>
     let menuOpenButton = document.querySelector(".menu-open-button");

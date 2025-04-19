@@ -127,7 +127,7 @@ header{
     background-color: transparent;
     backdrop-filter: var(--hero-backdrop-color);
     min-height: 400px;
-    width: calc(33vw - 48px);
+    width: calc(33vw - 16px);
   }
    .services-list{
     display: flex;
