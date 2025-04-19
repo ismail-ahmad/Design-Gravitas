@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Gravitas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Optimization for PageSpeed Insights starting below -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Gruppo&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" onload="this.onload=null; this.rel='stylesheet'" crossorigin="anonymous">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet"></noscript>
+<!--   &family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900 -->
+  <style>
+    :root{
+      --blue: #1E90FF;
+      --dark-blue: #003E7A;
+      --white: #ffffff;
+      --hero-section-bg-color: #142438;
+      --logo-text-font-size-mobile: 20px;
+      --logo-text-font-family: "gruppo", sans-serif;
+      --body-text: "Nunito", "Montserrat";
+      --body-font-size:14px;
+      --h1-font-size-mobile: 32px;
+      --h2-font-size-mobile: 28px;
+      --h3-font-size-mobile: 24px;
+      --h1-font-size: 32px;
+      --h2-font-size: 28px;
+      --h3-font-size: 24px;
+      --body-text-color: white;
+      --dark-theme-background-color: #05060F;
+      --hero-backdrop-filter: blur(6px);
+      --hero-backdrop-color: hsl(210, 100%, 56%);
+      --hero-backdrop-color-mobile: hsl(210, 80%, 30%);
+      --blob: radial-gradient(farthest-side at 50% 100%, var(--hero-backdrop-color-mobile)40px, transparent 86%);
+      --blob-tablet: radial-gradient(farthest-side at -60% 70%, var(--hero-backdrop-color)40px, transparent);
+      --blob-desktop: radial-gradient(farthest-side at 80% 120%, var(--hero-backdrop-color) 4%, transparent 100%);
+    }
+    *, *::before, *::after{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      list-style-type: none;
+    }
+    html{
+      width: 100%;
+      height: 100%;
+      background-color: var(--dark-theme-background-color);
+    }
+    body{
+      color: var(--body-text-color);
+      font-size: 18px;
+      font-family: 'Gruppo', sans-serif;
+    }
+    /* Common design for navigation menu */
+    .nav-menu a{
+      text-decoration: none;
+      color: var(--body-text-color);
+      font-size:var(--logo-text-font-size-mobile);
+    }
+    .logo-group{
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+    .logo-text a {
+      text-decoration: none;
+      color: var(--body-text-color);
+      font-size:var(--logo-text-font-size-mobile);
+    }
+    .hero-section .hero-cta{
+      color: var(--white);
+      border: none;
+      border-radius: 0 15px 0 15px;
+      cursor: pointer;
+      margin: 0;
+      font-family: var(--body-text);
+      background-color: var(--blue);
+      padding: 8px 0;
+    }
+
+/*     Common Styles for Services Section Start */
+
+    section.services{
+      margin: 0 16;
+    }
+    .services-heading {
+      font-size: var(--h1-font-size-mobile);
+      padding: 32px 0;
+      text-align: center;
+      font-size: var(--h1-font-size-mobile);
+      padding: 68px 0;
+      text-align: center;
+    }
+    .service-container{
+      background-color: transparent;
+      min-height: 60vh;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      position: relative;
+    }
+    .service-items {}
+    .services h3{
+      text-align: center;
+      padding: 16px 0;
+    }
+    .service-container > h3.service-heading {
+      padding: 38px 0;
+      font-size: var(--h2-font-size-mobile);
+    }
+    .service-items h3{
+      font-family: var(--body-text);
+      font-weight: normal;
+      font-size: var(--body-font-size);
+      text-align: left;
+    }
+
+/*     Common Styles for Services Section End */
+
+/*     Services styles start here      */
+
+
+    .service-container .service-heading::before{
+      content: "";
+      width: 90%;
+      height: 7px;
+      position: absolute;
+      background-color: rgb(30, 143, 255);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 1px solid rgb(30, 143, 255);
+      border-radius: 0 0 20px 20px;
+    }
+
+
+
+/*     Services styles End here */
+
+    
+    @media only screen and (max-width: 576px) {
+      body{
+        font-size: var(--body-font-size);
+      }
+      .hero-section h1{
+        font-weight: 900;
+        font-size: var(--h1-font-size-mobile);
+        text-align: center;
+      }
+      .logo-group{
+      justify-content: center;
+    }
+    header .logo-text{
+      font-size: var(--logo-text-font-size-mobile);
+      font-family: var(--logo-text-font-family);
+      
+    }
+    h1, h2, h3, h4{
+      font-family: "gruppo", sans-serif;
+    }
+    .nav-menu li{
+      text-align: center;
+      padding: 8px 0;
+    }
+    .nav-menu ul{
+      list-style-type: none;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-menu{
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: var(--dark-theme-background-color);
+      transform: translateX(100%);
+      z-index: 990;
+      transition: transform 0.3s ease;
+    }
+    .nav-menu-open{
+      transform: translateX(0);
+    }
+    .menu-open-button{
+      display: block;
+    }
+    .menu-close-button{
+      display: none;
+      position: absolute;
+      right: 8px;
+      top: 13px;
+    }
+    .menu-close-button-visible{
+      display: block;
+      z-index: 1000;
+    }
+    .no-scroll{
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      overflow: hidden;
+    }
+    .header{
+      position: relative;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 8px 0 0;
+      height: 55px;
+    }
+    .cta-button-container{
+      display: none;
+    }
+    /* Starting body hero styles here */
+    .hero-section .hero-cta{
+      width: 100%;
+    }
+
+    .hero-section{
+      height: calc(100vh - 55px);
+      background-color: var(--dark-theme-background-color);
+      width: 100%;      
+    }
+    .hero-container{
+      display: flex;
+      color: var(--white);
+      flex-flow: column nowrap;
+      position: relative;
+      padding: 0 16px;
+      height: 100%;
+      justify-content: space-evenly;
+      background-color: transparent;
+      backdrop-filter: var(--hero-backdrop-filter);
+    }
+    .hero-section h1{
+      /* padding: 8px 0; */
+    }
+    .hero-section .hero-list{
+      align-self: center;
+    }
+    .hero-list li{
+      padding: 8px 0;
+      text-align: left;
+      font-family: var(--body-text);
+    }
+    .button-container{
+      text-align: center;
+    }
+    .hero-section > div{
+      height: 100%;
+      width: 100%;
+      background-image: var(--blob);
+    }
+    .service-container{
+      height: 100vh;
+      justify-content: center;
+    }
+    .services .first-service-container{
+      height: calc(100vh - 167px);
+    }
+    .services .last-service-container{
+      height: 95vh;
+    }
+/* Ending body hero styles here */
+      .service-container .service-heading::before{
+      top: 10vh;
+    }
+    }
+  </style>
+  <link rel="stylesheet" href="styles/tablet-styles.css" media="only screen and (max-width:768px) and (min-width:577px)">
+  <link rel="stylesheet" href="styles/desktop-styles.css" media="only screen and (min-width:769px)">
+  <link rel="stylesheet" href="styles/large-screen.css" media="only screen and (min-width:992px)">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-group">
+      <div class="logo">
+        <a href="/">
+          <svg width="75" height="41" viewBox="0 0 75 41" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+          <rect width="74.2004" height="41" fill="transparent"/>
+          <path d="M64.0402 19.5525L63.3865 28.8162C53.2689 30.9108 37.3772 31.0283 37.3162 22.0003C37.2367 10.2259 66.3222 8.91588 66.3222 8.91588L64.0402 11.453" stroke="#1E90FF" stroke-width="4"/>
+          <path d="M13.3929 32.0899C12.6049 32.1926 11.8996 32.272 11.2954 32.3306L14.6753 13.2355C20.1064 12.1733 26.6401 11.635 31.8721 12.3747C34.713 12.7763 36.9707 13.5283 38.4659 14.6036C39.865 15.6099 40.6146 16.8956 40.5981 18.7094C40.577 21.0227 39.0525 23.1732 36.0182 25.166C33.0163 27.1375 28.9288 28.6779 24.7323 29.8287C20.5625 30.9722 16.4184 31.6957 13.3929 32.0899Z" fill="var(--dark-theme-background-color)" stroke="#1E90FF" stroke-width="4"/>
+          </svg>
+        </a>
+      </div>
+      <p class="logo-text">
+        <a href="/">Design&nbsp;Gravitas</a>
+      </p>
+    </div>
+    <svg class ="menu-close-button" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="white"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+    <nav class="nav-menu">      
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#Services">Services</a></li>
+        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#About">About</a></li>
+      </ul>
+    </nav>
+    <svg class ="menu-open-button" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    <div class="cta-button-container" style="background-color: transparent;">
+      <button class="cta-button">Book a Consultation</button>
+    </div>
+  </header>
+  <main>
+    <section role="hero" class="hero-section">
+      <div>
+        <div class="hero-container">
+        <h1 style="padding: 8px 0; font-size: 32px; font-weight: 900; font-family: 'gruppo', sans-serif; color: white; margin: 0;" fetch-priority="high">Web Design &amp; Development and Marketing Company</h1>
+        <ul class="hero-list">
+          <li>
+<svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/>
+</svg>
+Design Your Business Website</li>
+          <li>
+<svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/>
+</svg>
+Develop and Deploy your website</li>
+          <li>
+<svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/>
+</svg>
+Market your Business</li>
+        </ul>
+        <div class="button-container">
+          <button class="cta-button hero-cta">Get a Free Quote</button>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- services section start -->
+    <section class="services" id="services">
+      <h2 class="services-heading">Services</h2>
+      <div class="services-list">
+        <div class="service-container first-service-container">
+        <h3 class="service-heading">Web Design</h3>
+        <div class="service-items">
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Wireframing & Prototyping</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> UI/UX Design</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Responsive Design</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Custom Web Design</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Landing Page Design</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Design System Creation</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Branding Integration</h3>
+        </div>
+      </div>
+      <div class="service-container">
+        <h3 class="service-heading">Web Development</h3>
+        <div class="service-items">
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Front-End Development</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Back-End Development</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> CMS Implementation</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> E-commerce Development</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Custom Web Development</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> API Development &amp; Integration</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Website Maintenance &amp; Support</h3>
+        </div>
+      </div>
+      <div class="service-container last-service-container">
+        <h3 class="service-heading">SEO</h3>
+        <div class="service-items">
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Technical SEO Audits</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> SEO Strategy and Implementation</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Content Strategy &amp; Creation</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> On-Page SEO Optimization</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Local SEO</h3>
+          <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> SEO Analytics &amp; Reporting</h3>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- services section end -->
+  </main>
+  <script>
+    let menuOpenButton = document.querySelector(".menu-open-button");
+    let menuCloseButton = document.querySelector(".menu-close-button");
+    let html = document.querySelector("html");
+    let navMenu = document.querySelector(".nav-menu");
+    let toggle = (open) => {
+      navMenu.classList.toggle("nav-menu-open", open);
+      menuCloseButton.classList.toggle("menu-close-button-visible", open);
+      document.body.classList.toggle("no-scroll", open);
+    };
+    menuOpenButton.addEventListener("click", () => {toggle(true)});
+    menuCloseButton.addEventListener("click", () => {toggle(false)});
+  </script>
+</body>
+
+</html>
