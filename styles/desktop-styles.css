@@ -132,12 +132,14 @@ header{
    .services-list{
     display: flex;
     flex-flow: row nowrap;
+    padding: 0 0 100px 0;
     justify-content: center;
     gap: 8px;
     width: 100vw;
   }
   .services{
-    height: 100vh;
+    min-height: 700px;
+    height:100vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
