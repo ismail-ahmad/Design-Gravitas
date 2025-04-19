@@ -116,16 +116,17 @@
     display: none;
   }
   .service-container{
+    min-height: 600px;
     height: 100vh;
     justify-content: center;
     align-items: center;
   }
   .services .first-service-container{
-    height: calc(100vh - 167px);
+    height: calc(100vh - 160px);
   }
   .services .last-service-container{
     min-height: 95vh;
   }
   .service-container .service-heading::before{
-    top: 10vh;
+    top: 0;
   }
