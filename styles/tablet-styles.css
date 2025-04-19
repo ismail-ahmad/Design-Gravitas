@@ -1,0 +1,131 @@
+
+  /* Starting body hero styles here */
+  
+  .hero-section{
+    height: calc(100vh - 55px);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-theme-background-color);
+    color: var(--white);
+    background-image: var(--blob-tablet);
+  
+  }
+  .hero-section > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+  }
+  
+  .hero-container{
+    display: flex;
+    background-color: transparent;
+    flex-flow: column nowrap;
+    position: relative;
+    width: calc(100vw/12*10);
+    gap: 50px;
+
+  }
+  .hero-section h1{
+    padding: 8px 0;
+  }
+  .hero-section .hero-list{
+    /* padding: 0 8px; */
+  }
+  .hero-list li{
+    padding: 8px 0;
+    font-family: var(--body-text);
+    font-size: var(--body-font-size);
+  }
+  .button-container{
+    text-align: right;
+    padding: 0;
+  }
+  .hero-section .hero-cta{
+    width: 200px;
+    margin: 0;
+  }
+  .hero-container h1{
+    font-size: var(--h1-font-size);
+  }
+  
+  /* Ending body hero styles here */
+  .nav-menu li{
+    text-align: center;
+    padding: 8px 0;
+  }
+  .nav-menu ul{
+    list-style-type: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 100px 0;
+  }
+  .nav-menu{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-theme-background-color);
+    transform: translateX(100%);
+    z-index: 990;
+    transition: transform 0.3s ease;
+  }
+  .nav-menu-open{
+    transform: translateX(0);
+  }
+  .menu-open-button{
+    display: block;
+  }
+  .menu-close-button{
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 13px;
+  }
+  .menu-close-button-visible{
+    display: block;
+    z-index: 1000;
+  }
+  .no-scroll{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+  }
+  header{
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px 0 0;
+    height: 55px;
+  }
+  .cta-button-container{
+    display: none;
+  }
+  .service-container{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .services .first-service-container{
+    height: calc(100vh - 167px);
+  }
+  .services .last-service-container{
+    min-height: 95vh;
+  }
+  .service-container .service-heading::before{
+    top: 10vh;
+  }
