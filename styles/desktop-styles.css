@@ -138,7 +138,7 @@ header{
     width: 100vw;
   }
   .services{
-    min-height: 700px;
+    min-height: 769px;
     height:100vh;
     display: flex;
     flex-flow: column nowrap;
@@ -149,3 +149,57 @@ header{
     height: 140px;
   }
   /* Services section styles  starts here */
+
+  /* contact styles here */
+  section.contact-section{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 16px;
+    gap: 100px;
+    height: calc(100vh - 120px);
+}
+section.contact-section .contact-heading{
+    text-align: center;
+    font-size: var(--h1-font-size);
+    width: 100%;
+}
+section.contact-section .contact-container{
+    width: calc(100vw/12*6 - 32px);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 50px;
+    margin: 0 0 0 7vw;
+}
+.contact-button-container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 25px;
+}
+section.contact-section p{
+    text-align: left;
+    font-family: var(--body-text);
+    font-size: var(--body-font-size);
+}
+  
+  .contact-banner{
+    background-color: inherit;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: var(--body-font-size);
+    align-items: center;
+    padding: 8px 16px;
+    font-family: var(--body-text);
+    border-radius: 2px;
+    width: 100%;
+    cursor: pointer;
+}
+
+footer{
+    height: 100px;
+}
