@@ -7,13 +7,13 @@
   <title>Design Gravitas</title>
 
 
-  <!-- favicons starting below -->
-  <link rel="icon" href="assets/favicon-180x180.svg" type="image/svg+xml">
-  <link rel="icon" sizes="32x32" href="/favicon-32x32.png" type="image/png">
-  <link rel="icon" sizes="16x16" href="/favicon-16x16.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/apple-favicon-180x180.png" type="image/png" sizes="180x180">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1E90FF" type="image/svg+xml">
-  <!-- favicons ending below -->
+  <!-- Dark favicons starting below -->
+  <link rel="icon" href="assets/favicon-180x180.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+  <link rel="icon" sizes="32x32" href="/favicon-32x32.png" type="image/png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" sizes="16x16" href="/favicon-16x16.png" type="image/png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" href="assets/apple-favicon-180x180.png" type="image/png" sizes="180x180" media="(prefers-color-scheme: dark)">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1E90FF" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+  <!-- Dark favicons ending below -->
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -151,8 +151,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    border-top: 1px solid var(--footer-top-border);
   }
   footer .footer-heading{
     font-size: var(--body-font-size);
@@ -166,10 +164,10 @@
     section.contact-section{
         display: flex;
         flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         padding: 0 16px;
-        gap: 50px;
+        gap: 100px;
         height: calc(100vh - 49px);
     }
     section.contact-section .contact-heading{
@@ -178,39 +176,43 @@
         width: 100%;
     }
     section.contact-section .contact-container{
-        width: calc(100vw/12*8 - 32px);
+        width: calc(100vw - 32px);
         display: flex;
         flex-flow: column nowrap;
         gap: 50px;
-        
-        
     }
     .contact-button-container{
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
         justify-content: space-evenly;
         width: 100%;
-        gap: 25%;
+        gap: 25px;
     }
     section.contact-section p{
-        width: 100%;
-        text-align: center;
+        text-align: left;
+        font-family: var(--body-text);
+        font-size: var(--body-font-size);
     }
-    section.contact-section button{
-        border: none;
-        background-color: var(--blue);
+    .contact-banner{
+        background-color: inherit;
         color: white;
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        font-size: var(--body-font-size);
+        align-items: center;
         padding: 8px 16px;
         font-family: var(--body-text);
-        width: 200px;
+        width: 214px;
+        align-self: center;
         cursor: pointer;
     }
-    section.contact-section button:first-child{
+    /* section.contact-section button:first-child{
         border-radius: 0 15px;
     }
     section.contact-section button:last-child{
         border-radius: 15px 0;
-    }
+    } */
     /* Common contact us section styles ends here */
 
     
@@ -352,32 +354,60 @@
     footer{
     height: 50px;
   }
-
     /* footer styles for mobile ends here */
 
 
     /* Contact-us styles */
 
     section.contact-section{
-        min-height: 200px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 16px;
+        gap: 100px;
         height: calc(100vh - 49px);
     }
-
-    .contact-button-container{
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+    section.contact-section .contact-heading{
+        text-align: center;
+        margin: 8px;
+        font-size: var(--h1-font-size);
         width: 100%;
-        gap: 16px;
     }
-
-    section.contact-section button:first-child{
-        border-radius: 5px 5px 0 0;
+    section.contact-section .contact-container{
+        width: calc(100vw/12*10 - 32px);
+        display: flex;
+        align-self: center;
+        flex-flow: column nowrap;
+        gap: 50px;
     }
-    section.contact-section button:last-child{
-        border-radius: 0 0 5px 5px;
+    .contact-button-container{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        width: 100%;
+        gap: 25px;
     }
-
+    section.contact-section p{
+        text-align: left;
+        font-family: var(--body-text);
+        font-size: var(--body-font-size);
+        text-align: justify;
+    }
+    .contact-banner{
+        background-color: inherit;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        font-size: var(--body-font-size);
+        align-items: center;
+        padding: 8px 16px;
+        font-family: var(--body-text);
+        width: 214px;
+        align-self: center;
+        cursor: pointer;
+    }
     /* contact-us styles ends here */
     }
   </style>
@@ -484,10 +514,11 @@
     <section class="contact-section">
         <h2 class="contact-heading">Contact</h2>
         <div class="contact-container">
-            <p>Reach out to us on the following email or schedule a quick discovery call with us</p>
+            <p class="contact-content">Reach out to us on the following email or schedule a quick discovery call with us</p>
             <div class="contact-button-container">
-                <button onclick="window.location.href='mailto:ismailahmad0505@gmail.com'" class="contact-us button">Write to us!</button>
-                <button class="contact-us button">Schedule a Meeting</button>
+                <p class="contact-banner" onclick="window.location.href='mailto:ismailahmad0505@gmail.com'"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="var(--blue)"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg> <span>Write to us!</span></p>
+                <p class="contact-banner"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="var(--blue)"><path d="M580-240q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z"/></svg><span>Schedule a Meeting</span></p>
+                <p class="contact-banner"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="var(--blue)"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg><span>Schedule a Meeting</span></p>
             </div>
         </div>
     </section>

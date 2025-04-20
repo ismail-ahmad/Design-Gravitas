@@ -131,6 +131,14 @@
     top: 0;
   }
 
+  /* footer styles starts here */
+
+  footer{
+    height: 49px;
+  }
+
+  /* footer styles end here */
+
    /* Contact-us styles */
 
    section.contact-section{
@@ -143,7 +151,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 16px;
 }
 
 section.contact-section button:first-child{
@@ -154,3 +161,11 @@ section.contact-section button:last-child{
 }
 
 /* contact-us styles ends here */
+
+section.contact-section .contact-container{
+    width: calc(100vw/12*10 - 32px);
+    display: flex;
+    align-self: center;
+    flex-flow: column nowrap;
+    gap: 50px;
+}
