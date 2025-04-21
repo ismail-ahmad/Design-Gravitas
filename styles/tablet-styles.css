@@ -150,6 +150,9 @@
     align-items: center;
     width: 100%;
 }
+.contact-button-container .contact-banner{
+    width: 100%;
+}
 
 section.contact-section button:first-child{
     border-radius: 5px 5px 0 0;
