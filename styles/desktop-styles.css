@@ -152,19 +152,20 @@ header{
 
   /* contact styles here */
   section.contact-section{
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    padding: 0 16px;
-    gap: 100px;
+    gap: 25vh;
     height: calc(100vh - 120px);
+    min-height: 400px;
+    width: calc(100vw/12*10);
+    margin: 0 auto;
 }
 section.contact-section .contact-heading{
     text-align: center;
 }
 section.contact-section .contact-container{
-    width: calc(100vw/12*6 - 32px);
+    width: 100%;
     gap: 50px;
-    margin: 0 0 0 7vw;
 }
 .contact-button-container{
     justify-content: space-evenly;
