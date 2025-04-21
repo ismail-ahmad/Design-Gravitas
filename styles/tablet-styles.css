@@ -170,3 +170,20 @@ section.contact-section .contact-container{
     flex-flow: column nowrap;
     gap: 50px;
 }
+
+/* Intersection styles */
+
+.contact-container, .service-container{
+    opacity: 0;
+    transform: translateX(-80%);
+    }
+
+
+    .show{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms;
+    }
+
+
+    /* Intersection styles ends here */
