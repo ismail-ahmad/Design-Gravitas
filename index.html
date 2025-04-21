@@ -20,6 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Optimization for PageSpeed Insights starting below -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="intersection-styles.css">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Gruppo&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" onload="this.onload=null; this.rel='stylesheet'" crossorigin="anonymous">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet"></noscript>
 <!--   &family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900 -->
@@ -97,7 +98,6 @@
       font-size: var(--h1-font-size-mobile);
       padding: 32px 0;
       text-align: center;
-      font-size: var(--h1-font-size-mobile);
       padding: 68px 0;
       text-align: center;
     }
@@ -109,7 +109,6 @@
       align-items: center;
       position: relative;
     }
-    .service-items {}
     .services h3{
       text-align: center;
       padding: 16px 0;
@@ -393,6 +392,28 @@
         cursor: pointer;
     }
     /* contact-us styles ends here */
+
+
+    /* Intersection styles */
+
+    .contact-container, .service-container{
+    opacity: 0;
+    transform: translateX(-80%);
+    }
+
+
+    .show{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms;
+    }
+
+    /* Intersection styles ends here */
+    }
+    @media (prefers-reduced-motion) {
+        .contact-container, .service-container, .service-container{
+            transition: none;
+        }
     }
   </style>
   <link rel="stylesheet" href="styles/tablet-styles.css" media="only screen and (max-width:768px) and (min-width:577px)">
@@ -528,6 +549,23 @@
     };
     menuOpenButton.addEventListener("click", () => {toggle(true)});
     menuCloseButton.addEventListener("click", () => {toggle(false)});
+    let options = {
+        root: null,
+        threshold: 0.1,
+    };
+    let observer = new IntersectionObserver( (entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else{
+                entry.target.classList.remove("show");
+            }
+        });
+    }, options);
+    document.querySelectorAll(".contact-container, .service-container").forEach((el) => {
+        observer.observe(el);
+    });
   </script>
 </body>
 

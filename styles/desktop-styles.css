@@ -145,8 +145,12 @@ header{
     justify-content: center;
     align-items: center;
   }
+  .services-heading{
+    font-size: var(--h1-font-size);
+  }
   .service-heading{
     height: 140px;
+    font-size: var(--h2-font-size);
   }
   /* Services section styles  starts here */
 
@@ -196,3 +200,27 @@ section.contact-section p{
 footer{
     height: 100px;
 }
+
+/* Intersection styles */
+
+.contact-container, .service-container{
+    opacity: 0;
+    transform: translateX(-80%);
+    }
+
+
+    .show{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms;
+    }
+
+    .service-container:nth-child(2){
+        transition: all 1000ms;
+    }
+
+    .service-container:nth-child(3){
+        transition: all 1500ms;
+    }
+
+    /* Intersection styles ends here */
