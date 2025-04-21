@@ -161,21 +161,17 @@
 
     /* Common contact us section styles ends here */
 
-    section.contact-section{
+    .contact-section{
         display: flex;
         flex-flow: column nowrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 0 16px;
         gap: 100px;
-        height: calc(100vh - 49px);
     }
-    section.contact-section .contact-heading{
+    .contact-section .contact-heading{
         text-align: center;
         font-size: var(--h1-font-size);
         width: 100%;
     }
-    section.contact-section .contact-container{
+    .contact-section .contact-container{
         width: calc(100vw - 32px);
         display: flex;
         flex-flow: column nowrap;
@@ -188,7 +184,7 @@
         width: 100%;
         gap: 25px;
     }
-    section.contact-section p{
+    .contact-section p{
         text-align: left;
         font-family: var(--body-text);
         font-size: var(--body-font-size);
@@ -346,7 +342,7 @@
       height: calc(100vh - 160px);
     }
     .services .last-service-container{
-      height: 95vh;
+      height: 100vh;
     }
 /* Ending body hero styles here */
     /* footer styles for mobile starts here */
@@ -360,30 +356,20 @@
     /* Contact-us styles */
 
     section.contact-section{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 0 16px;
-        gap: 100px;
-        height: calc(100vh - 49px);
+        padding: 16px 0 0 0;
+        justify-content: center;
+        height: calc(100vh - 65px);
+        min-height: 400px;
     }
     section.contact-section .contact-heading{
-        text-align: center;
-        margin: 8px;
-        font-size: var(--h1-font-size);
-        width: 100%;
+        margin: 8px 0;
     }
     section.contact-section .contact-container{
         width: calc(100vw/12*10 - 32px);
-        display: flex;
+        justify-content: flex-start;
         align-self: center;
-        flex-flow: column nowrap;
-        gap: 50px;
     }
     .contact-button-container{
-        display: flex;
-        flex-flow: column nowrap;
         justify-content: space-evenly;
         width: 100%;
         gap: 25px;
