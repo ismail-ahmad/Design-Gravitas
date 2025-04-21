@@ -33,9 +33,6 @@
   .hero-section h1{
     padding: 8px 0;
   }
-  .hero-section .hero-list{
-    /* padding: 0 8px; */
-  }
   .hero-list li{
     padding: 8px 0;
     font-family: var(--body-text);
