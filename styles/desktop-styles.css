@@ -32,11 +32,13 @@ header{
   .nav-menu li{
     padding: 0 12px 0 12px;
     border: 1px solid rgba(255, 255, 255, 0);
+    width: 100px;
+    text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
   }
   .nav-menu li:hover{
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 3px;
   }
@@ -45,7 +47,7 @@ header{
   }
   .cta-button{
     color: var(--white);
-    background-color: var(--blue);
+    background-color: var(--bg-color-cta);
     border: none;
     padding: 8px 16px;
     font-family: inherit;
@@ -56,12 +58,12 @@ header{
   }
   .cta-button:hover{
     transform: translate(-4px, -4px);
-    box-shadow: 4px 4px 0 hsl(210, 80%, 30%);
+    box-shadow: 4px 4px 0 hsla(210, 100%, 45%, 0.65);
   }
   .cta-button:active{
     transform: translate(0, 0);
     transition: 0.1s;
-    box-shadow: 1px 1px 0 hsl(210, 80%, 30%);
+    box-shadow: 1px 1px 0 hsla(210, 100%, 45%, 0.65);
   }
   
   

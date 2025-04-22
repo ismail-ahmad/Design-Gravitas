@@ -49,6 +49,8 @@
       --blob-tablet: radial-gradient(farthest-side at -60% 70%, var(--hero-backdrop-color)40px, transparent);
       --blob-desktop: radial-gradient(farthest-side at 80% 120%, var(--hero-backdrop-color) 4%, transparent 100%);
       --footer-top-border: #05060F;
+      --bg-color-cta: hsl(210, 100%, 45%);
+      --font-size-cta: 17px;
     }
     *, *::before, *::after{
       padding: 0;
@@ -85,11 +87,12 @@
     .hero-section .hero-cta{
       color: var(--white);
       border: none;
+      font-family: var(--font-size-cta);
       border-radius: 0 15px 0 15px;
       cursor: pointer;
       margin: 0;
-      font-family: var(--body-text);
-      background-color: var(--blue);
+      font-size: var(--font-size-cta);
+      background-color: var(--bg-color-cta);
       padding: 8px 0;
     }
 
