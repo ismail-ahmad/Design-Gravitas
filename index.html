@@ -185,7 +185,7 @@
         gap: 25px;
     }
     .contact-section p{
-        text-align: left;
+        text-align: center;
         font-family: var(--body-text);
         font-size: var(--body-font-size);
     }
@@ -199,9 +199,9 @@
         align-items: center;
         padding: 8px 16px;
         font-family: var(--body-text);
-        width: 214px;
         align-self: center;
         cursor: pointer;
+        border: 2px solid rgba(30, 143, 255, 0.5);
     }
     /* section.contact-section button:first-child{
         border-radius: 0 15px;
@@ -379,18 +379,8 @@
         text-align: justify;
     }
     .contact-banner{
-        background-color: inherit;
-        color: white;
-        display: flex;
-        justify-content: flex-start;
-        gap: 10px;
-        font-size: var(--body-font-size);
-        align-items: center;
-        padding: 8px 16px;
-        font-family: var(--body-text);
-        width: 214px;
-        align-self: center;
-        cursor: pointer;
+        width: 100%;
+        justify-content: center;
     }
     /* contact-us styles ends here */
 
@@ -564,6 +554,11 @@
     }, options);
     document.querySelectorAll(".contact-container, .service-container").forEach((el) => {
         observer.observe(el);
+    });
+    document.querySelectorAll(".contact-banner").forEach((el) => {
+        el.style.userSelect = "none";
+        el.style.webkitUserSelect = "none";
+        el.style.msUserSelect = "none";
     });
   </script>
 </body>
