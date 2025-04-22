@@ -168,12 +168,12 @@ section.contact-section .contact-heading{
     text-align: center;
 }
 section.contact-section .contact-container{
-    width: 100%;
+    width: 50%;
     gap: 50px;
 }
 .contact-button-container{
     justify-content: space-evenly;
-    width: 100%;
+    width: calc(100vw/12*3 - 32px);
     gap: 10px;
 }
 section.contact-section p{
@@ -193,6 +193,7 @@ section.contact-section p{
     padding: 8px 16px;
     font-family: var(--body-text);
     border-radius: 2px;
+    min-width: 220px;
     width: 100%;
     cursor: pointer;
 }
