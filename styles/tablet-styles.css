@@ -181,3 +181,16 @@ section.contact-section .contact-container{
     transition: all 500ms;
     }
     /* Intersection styles ends here */
+    /* tablet styles for wcu section starts here*/
+
+
+    .wcu-cards-list{
+        flex-flow: column nowrap;
+        gap: 16px;
+    }
+    .wcu-card{
+        height: 100vh;
+        width: 100%;
+    }
+
+    /* tablet styles for wcu section ends here*/
