@@ -236,8 +236,8 @@ footer{
         height: calc(100% - 47px);
         align-items: center;
     }
-    .why-choose-us-section{
-        
+    .why-choose-us-section h2{
+        padding: 30px 0;
     }
     .wcu-card{
         width: calc(100vw/12*4 - 32px);

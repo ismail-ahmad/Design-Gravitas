@@ -219,12 +219,12 @@
 
     .why-choose-us-section{
         font-family: var(--body-text);
+        font-size: var(--body-font-size);
     }
     .why-choose-us-section h2{
         font-family: var(--logo-text-font-family);
         text-align: center;
         font-size: var(--h1-font-size);
-        padding: 8px 0;
     }
     .why-choose-us-section .wcu-cards-list{
         display: flex;
@@ -237,18 +237,25 @@
         font-size: var(--h2-font-size);
         padding: 8px 0 0 0;
     }
+    .wcu-card p{
+        height: 96px;
+    }
     .wcu-card{
         display: flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 50px;
         align-items: center;
         padding: 0 16px;
+        opacity: 0;
+        transform: translateX(-80%);
     }
 
     .wcu-card ul{
         list-style-image: url('/assets/checkmark.svg');
         list-style-position: inside;
-        padding: 0 0 200px 0;
+        padding: 0 0 100px 0;
+        height: 256px;
     }
     .wcu-card li{
         padding: 0 0 16px 0;
@@ -674,7 +681,7 @@
             }
         });
     }, options);
-    document.querySelectorAll(".contact-container, .service-container").forEach((el) => {
+    document.querySelectorAll(".contact-container, .service-container, .wcu-card").forEach((el) => {
         observer.observe(el);
     });
     document.querySelectorAll(".contact-banner").forEach((el) => {
