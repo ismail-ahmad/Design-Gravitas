@@ -101,6 +101,9 @@ header{
   .hero-section h1{
     padding: 8px 0;
   }
+  .hero-section h2{
+    text-align: left;
+  }
   .hero-section .hero-list{
     margin: 0 8px;
   }

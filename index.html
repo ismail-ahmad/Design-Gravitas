@@ -316,6 +316,10 @@
       background-color: transparent;
       backdrop-filter: var(--hero-backdrop-filter);
     }
+    .hero-section h2{
+        width: calc(100vw/12*10 - 32px );
+        align-self: center;
+    }
     .hero-section .hero-list{
       width: calc(100vw/12*10 - 32px );
       align-self: center;
@@ -403,6 +407,17 @@
 
     /* Intersection styles ends here */
     }
+    /* new design styles ends here */
+
+    .hero-section h2{
+        font-size: var(--body-font-size);
+        text-align: center;
+        font-family: var(--body-text);
+        font-weight: normal;
+    }
+
+    /* new design styles ends here */
+
     @media (prefers-reduced-motion) {
         .contact-container, .service-container, .service-container{
             transition: none;
@@ -447,17 +462,18 @@
     <section class="hero-section">
       <div>
         <div class="hero-container">
-        <h1 style="padding: 8px 0; font-size: 32px; font-weight: 900; font-family: 'gruppo', sans-serif; color: white; margin: 0;" fetch-priority="high">Web Design &amp; Development and Marketing Company</h1>
+        <h1 style="padding: 8px 0; font-size: 32px; font-weight: 900; font-family: 'gruppo', sans-serif; color: white; margin: 0;" fetch-priority="high">Web Design, Development and Marketing Company</h1>
+        <h2>Transform Your Online Presence with Expert Web Design, Development & Digital Marketing</h2>
         <ul class="hero-list">
           <li>
             <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg>
-                Design Your Business Website</li>
+            Custom web design tailored to your brand and business goals</li>
           <li>
             <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg>
-                Develop and Deploy your website</li>
+            Professional development with responsive, user-friendly interfaces</li>
           <li>
             <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg>
-                Market your Business</li>
+            SEO-optimised structure to enhance your online visibility</li>
         </ul>
         <div class="button-container">
           <button class="cta-button hero-cta" onclick="window.location.href='mailto:ismail.ahmad@designgravitas.com'">Get a Free Quote</button>
@@ -507,6 +523,25 @@
       </div>
     </section>
     <!-- services section end -->
+
+
+    <!-- why work with us section start -->
+<section class="why-work-with-us" id="why-work">
+    <h2 class="services-heading">Why Work With Us</h2>
+    <div class="service-container">
+      <div class="service-items">
+        <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> 100% Job Success Score on Upwork</h3>
+        <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Top Rated Plus Badge on Upwork</h3>
+        <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Integrated SEO & Development Expertise</h3>
+        <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Proven Client Success Stories</h3>
+        <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Transparent Communication</h3>
+        <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg> Bespoke Digital Solutions</h3>
+      </div>
+    </div>
+  </section>
+  <!-- why work with us section end -->
+
+
     <!-- contact us section starts here -->
 
     <section class="contact-section" id="contact">
