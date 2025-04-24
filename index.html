@@ -266,10 +266,9 @@
         list-style-position: outside;
         padding: 0 0 100px 0;
         height: 256px;
-        margin-left: 16px;
     }
     .wcu-card li{
-        padding: 0 0 20px 0;
+        padding: 0 0 16px 0;
     }
 
     /* Common styles for wcu section ends here*/
@@ -469,24 +468,38 @@
         gap: 16px;
     }
     .wcu-heading{
-        padding: 68px 0; /*160px*/
+        padding: 68px 0;
     }
     .wcu-card{
-        height: 80vh;
+        height: 98vh;
         justify-content: space-evenly;
         min-height: 600px;
+        font-size: var(--body-font-size);
     }
     .wcu-card:first-child{
         height: calc(100vh - 160px);
+    }
+    .wcu-card:first-child p{
+        height: initial;
+    }
+    .wcu-card:first-child ul{
+        padding-bottom: 0;
+        padding-bottom: 16px;
+    }
+    .wcu-card:first-child h3{
+        padding-top: 8px;
     }
     .wcu-card p{
         width: 75vw;
         height: 144px;
     }
-
+    .wcu-card h3{
+        padding-top: 50px;
+    }
     .wcu-card ul{
         width: 75vw;
         height: initial;
+        padding-bottom: 100px;
     }
 
     .wcu-card:nth-child(even){
