@@ -244,7 +244,7 @@ footer{
         width: calc(100vw/12*4 - 128px);
         min-height: 650px;
         justify-content: space-evenly;
-        height: 98vh;
+        height: 80vh;
         padding: 0 48px;
         border-radius: 40px;
     }
