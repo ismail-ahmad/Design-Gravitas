@@ -216,3 +216,15 @@ section.contact-section .contact-container{
     }
 
     /* tablet styles for wcu section ends here*/
+
+
+    .our-clients{
+        min-height: 370px;
+        height: 50vh;
+        justify-content: space-evenly;
+    }
+    .logos-container{
+        flex-flow: row nowrap;
+        gap: 150px;
+        height: 200px;
+    }

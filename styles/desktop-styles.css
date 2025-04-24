@@ -130,7 +130,7 @@ header{
     background-color: transparent;
     backdrop-filter: var(--hero-backdrop-color);
     min-height: 400px;
-    width: calc(100vw/12*4 - 128px);
+    width: calc(100vw/12*4 - 64px);
   }
    .services-list{
     display: flex;
@@ -241,12 +241,13 @@ footer{
         padding: 68px 0;
     }
     .wcu-card{
-        width: calc(100vw/12*4 - 128px);
+        width: calc(100vw/12*4 - 64px);
         min-height: 650px;
         justify-content: space-evenly;
         height: 80vh;
         padding: 0 48px;
         border-radius: 40px;
+        overflow: hidden;
     }
     .wcu-card:nth-child(1){
         border-radius: 0 0 40px 0;
@@ -265,4 +266,15 @@ footer{
     }
     .wcu-card:nth-child(6){
         border-radius: 40px 0 0 0;
+    }
+
+    .our-clients{
+        min-height: 370px;
+        height: 50vh;
+        justify-content: space-evenly;
+    }
+    .logos-container{
+        flex-flow: row nowrap;
+        gap: 150px;
+        height: 200px;
     }

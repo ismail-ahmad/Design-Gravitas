@@ -289,6 +289,41 @@
     }
 
     /* Common styles for wcu section ends here*/
+
+    /* Common styles for our clients section starts here*/
+
+
+    .our-clients{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100vw;
+        min-height: 370px;
+        height: 50vh;
+    }
+    .our-clients-heading{
+        font-size: var(--h1-font-size);
+        padding: 68px 0;
+    }
+    .logos-container{
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        padding: 0 16px;
+        flex-flow: row nowrap;
+        gap: 150px;
+        height: 200px;
+    }
+    .white-bg{
+        background-color: white;
+    }
+    
+
+    /* Common styles for our clients section ends here*/
     
     @media only screen and (max-width: 576px) {
       body{
@@ -526,7 +561,34 @@
     .wcu-card:nth-child(odd){
         border-radius: 0 40px;
     }
+    .logos-container{
+        gap: 50px;
+    }
 
+    /* .our-clients{
+        height: 100vh;
+        min-width: none;
+        justify-content: space-evenly;
+    }
+    .logos-container{
+        flex-flow: row wrap;
+        gap: 16px;
+        min-height: 600px;
+        justify-content: space-evenly;
+    }
+    .client-logo{
+        width: 45vw;
+        text-align: center;
+    }
+    .client-logo:last-child{
+        width: 100%;
+    }
+    .client-logo:last-child img{
+        width: 100%;
+    }
+    .client-logo:nth-child(3), .client-logo:nth-child(4), .client-logo:nth-child(5), .client-logo:nth-child(6){
+        width: 100px;
+    } */
     }
     @media (prefers-reduced-motion) {
         .contact-container, .service-container, .service-container{
@@ -701,6 +763,24 @@
 
 
     <!-- Why choose us section ends here -->
+
+    <!-- our clients section starts here -->
+
+    <section class="our-clients">
+        <h2 class="our-clients-heading">Our Clients</h2>
+        <div class="logos-container">
+            <div class="client-logo"><img height="80px" src="assets/clients-logo/MWS-Logo.png" alt=""></div>
+        <div class="client-logo white-bg"><img height="80px" src="assets/clients-logo/color-it.png" alt=""></div>
+        <div class="client-logo"><img height="80px" src="assets/clients-logo/br-logo.png" alt=""></div>
+        <div class="client-logo"><img height="80px" src="assets/clients-logo/gik_logo.jpeg" alt=""></div>
+        <div class="client-logo"><img height="80px" src="assets/clients-logo/M.png" alt=""></div>
+        <div class="client-logo"><img height="80px" src="assets/clients-logo/zee.png" alt=""></div>
+        <div class="client-logo white-bg"><img height="80px" src="assets/clients-logo/the-furniture-shack.png" alt=""></div>
+        </div>
+    </section>
+
+    <!-- our clients section ends here -->
+
     <!-- contact us section starts here -->
 
     <section class="contact-section" id="contact">
@@ -768,6 +848,7 @@
         });
     });
   </script>
+  <script src="scroll-animation.js"></script>
 </body>
 
 </html>
