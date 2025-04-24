@@ -199,6 +199,7 @@ section.contact-section .contact-container{
         margin: 0;
         font-size: var(--body-text);
         min-height: 750px;
+        padding: 32px;
     }
 
     .wcu-card:nth-child(even){
