@@ -161,7 +161,7 @@ header{
   section.contact-section{
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 20vh;
+    gap: 0;
     height: calc(100vh - 100px);
     min-height: 400px;
     width: calc(100vw/12*10);
