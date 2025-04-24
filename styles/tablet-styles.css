@@ -198,8 +198,8 @@ section.contact-section .contact-container{
         width: calc(100vw/12*6 - 32px);
         margin: 0;
         font-size: var(--body-text);
-        min-height: 750px;
-        padding: 32px;
+        min-height: 610px;
+        padding: 0 32px;
     }
 
     .wcu-card:nth-child(even){
@@ -208,18 +208,11 @@ section.contact-section .contact-container{
     .wcu-card:nth-child(odd){
         border-radius: 0 40px 40px 0;
     }
-
-    /* .wcu-card:first-child{
-        height: calc(100vh - 160px);
-    }
-    .wcu-card p{
-        width: 75vw;
-        height: 144px;
-    }
+    .wcu-card p{}
 
     .wcu-card ul{
-        width: 75vw;
         height: initial;
-    } */
+        padding-bottom: 0;
+    }
 
     /* tablet styles for wcu section ends here*/
