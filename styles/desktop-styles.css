@@ -137,7 +137,7 @@ header{
     flex-flow: row nowrap;
     padding: 0 0 100px 0;
     justify-content: center;
-    gap: 16px;
+    gap: 32px;
     width: 100vw;
   }
   .services{
@@ -233,7 +233,7 @@ footer{
 
     .why-choose-us-section .wcu-cards-list{
         flex-flow: row wrap;
-        gap: 16px;
+        gap: 32px;
         height: calc(100% - 47px);
         align-items: center;
     }
