@@ -225,6 +225,6 @@ section.contact-section .contact-container{
     }
     .logos-container{
         flex-flow: row nowrap;
-        gap: 150px;
+        gap: 50px;
         height: 200px;
     }
