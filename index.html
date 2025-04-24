@@ -508,13 +508,6 @@
     transform: translateX(-80%);
     }
 
-
-    .show{
-    opacity: 1;
-    transform: translateX(0);
-    transition: all 500ms;
-    }
-
     /* Intersection styles ends here */
 
 
@@ -571,6 +564,8 @@
         gap: 16px;
         min-height: 400px;
         justify-content: space-around;
+        transform: translateX(-80%);
+        opacity: 0;
     }
     .client-logo:first-child{
         width: 95%;
@@ -589,6 +584,12 @@
     .client-logo:nth-child(3), .client-logo:nth-child(4), .client-logo:nth-child(5), .client-logo:nth-child(6){
         width: 100px;
     }
+    .show{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms;
+    }
+    
     }
     @media (prefers-reduced-motion) {
         .contact-container, .service-container, .service-container{
@@ -827,7 +828,7 @@
             }
         });
     }, options);
-    document.querySelectorAll(".contact-container, .service-container, .wcu-card").forEach((el) => {
+    document.querySelectorAll(".contact-container, .service-container, .wcu-card, .logos-container").forEach((el) => {
         observer.observe(el);
     });
     document.querySelectorAll(".contact-banner").forEach((el) => {
