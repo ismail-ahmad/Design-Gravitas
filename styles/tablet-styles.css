@@ -28,8 +28,8 @@
     position: relative;
     width: calc(100vw/12*10);
     gap: 50px;
-
   }
+
   .hero-section h1{
     padding: 8px 0;
   }
@@ -45,10 +45,22 @@
   .hero-section .hero-cta{
     width: 200px;
     margin: 0;
+    opacity: 0;
+    transition: 300ms opacity 1200ms;
   }
   .hero-container h1{
     font-size: var(--h1-font-size);
   }
+
+  /* hero animation starts here*/
+  
+  .hero-container h1{ opacity: 0; transform: translateX(-100%); transition:  500ms all 0ms;}
+  .hero-container p{ opacity: 0; transform: translateX(-100%); transition:  700ms all 0ms;}
+  .hero-container .hero-list-first{ opacity: 0; transform: translateX(-100%); transition:  900ms all 0ms;}
+  .hero-container .hero-list-second{ opacity: 0; transform: translateX(-100%); transition:  1000ms all 0ms;}
+  .hero-container .hero-list-third{ opacity: 0; transform: translateX(-100%); transition:  1100ms all 0ms;}
+
+  /* hero animation ends here*/
   
   /* Ending body hero styles here */
   .nav-menu li{

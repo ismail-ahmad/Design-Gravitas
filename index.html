@@ -649,16 +649,16 @@
     <section class="hero-section">
       <div>
         <div class="hero-container">
-        <h1>Web Design &amp; Development and Marketing Company</h1>
+        <h1 class="h1">Web Design &amp; Development and Marketing Company</h1>
         <p class="hero-text">Elevate Your Brand with the <i>D3G</i> approach: <i>Design. Develop. Deploy. Grow.</i> Your Complete Digital Journey</p>
         <ul class="hero-list">
-          <li>
+          <li class="hero-list-first">
             <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg>
                 <i>Design</i> Your Business Website</li>
-          <li>
+          <li class="hero-list-second">
             <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg>
                 <i>Develop and Deploy</i> your website</li>
-          <li>
+          <li class="hero-list-third">
             <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg>
                 <i>Grow</i> your Business</li>
         </ul>
@@ -885,10 +885,13 @@
         });
     });
     window.addEventListener("load", () => {
-      document.querySelectorAll(".hero-container, .header").forEach((el) => {
+      document.querySelectorAll(".hero-container, .hero-list-first, .hero-list-second, .hero-list-third, .hero-text, .h1, .hero-cta").forEach((el) => {
         el.style.opacity = "1";
+        el.style.transform = "translateY(0)";
       });
-      document.querySelector(".hero-container").style.transform = "translateY(0)";
+      // document.querySelectorAll(".hero-list-first, .hero-list-second, .hero-list-third, .hero-text, .h1").forEach(el => {
+        
+      // });
     });
   </script>
 </body>
