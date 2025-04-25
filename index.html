@@ -649,15 +649,15 @@
     <section class="hero-section">
       <div>
         <div class="hero-container">
-        <h1 class="h1">Web Design &amp; Development and Marketing Company</h1>
-        <p class="hero-text">Elevate Your Brand with the <i>D3G</i> approach: <i>Design. Develop. Deploy. Grow.</i> Your Complete Digital Journey</p>
+        <h1 class="h1">Transforming Brands with Innovative Web Design &amp; Development</h1>
+        <p class="hero-text">Elevate Your Brand with our <i>D3G</i> approach, Your Complete Digital Journey</p>
         <ul class="hero-list">
           <li class="hero-list-first">
             <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg>
-                <i>Design</i> Your Business Website</li>
+                <i>Design</i></li>
           <li class="hero-list-second">
             <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg>
-                <i>Develop and Deploy</i> your website</li>
+                <i>Develop &amp; Deploy</i></li>
           <li class="hero-list-third">
             <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg>
                 <i>Grow</i> your Business</li>
@@ -668,6 +668,26 @@
       </div>
       </div>
     </section>
+
+
+    <!-- our clients section starts here -->
+
+    <section class="our-clients">
+      <h2 class="our-clients-heading">Our Clients</h2>
+      <div class="logos-container">
+          <div class="client-logo"><img height="80px" width="192px" src="assets/clients-logo/MWS-Logo.png" alt="Michael Web Services logo" lazy-loading></div>
+      <div class="client-logo white-bg"><img height="80px" width="209" src="assets/clients-logo/color-it.png" alt="Color it logo" loading="lazy"></div>
+      <div class="client-logo"><img height="80px" width="86px" src="assets/clients-logo/br-logo.png" alt="Bookroo logo" loading="lazy"></div>
+      <div class="client-logo"><img height="80px" width="80px" src="assets/clients-logo/gik_logo.jpeg" alt="GiK logo" loading="lazy"></div>
+      <div class="client-logo"><img height="80px" width="80px" src="assets/clients-logo/M.webp" alt="Merch Logo" loading="lazy"></div>
+      <div class="client-logo"><img height="80px" width="80px" src="assets/clients-logo/zee.png" alt="Zyrous Logo" loading="lazy"></div>
+      <div class="client-logo white-bg"><img width="558px" height ="78px" src="assets/clients-logo/the-furniture-shack.webp" alt="The Furniture shack logo" loading="lazy"></div>
+      </div>
+  </section>
+
+  <!-- our clients section ends here -->
+
+
     <!-- services section start -->
     <section class="services" id="services">
       <h2 class="services-heading">Services</h2>
@@ -779,23 +799,6 @@
 
     <!-- Why choose us section ends here -->
 
-    <!-- our clients section starts here -->
-
-    <section class="our-clients">
-        <h2 class="our-clients-heading">Our Clients</h2>
-        <div class="logos-container">
-            <div class="client-logo"><img height="80px" width="192px" src="assets/clients-logo/MWS-Logo.png" alt="Michael Web Services logo" lazy-loading></div>
-        <div class="client-logo white-bg"><img height="80px" width="209" src="assets/clients-logo/color-it.png" alt="Color it logo" loading="lazy"></div>
-        <div class="client-logo"><img height="80px" width="86px" src="assets/clients-logo/br-logo.png" alt="Bookroo logo" loading="lazy"></div>
-        <div class="client-logo"><img height="80px" width="80px" src="assets/clients-logo/gik_logo.jpeg" alt="GiK logo" loading="lazy"></div>
-        <div class="client-logo"><img height="80px" width="80px" src="assets/clients-logo/M.webp" alt="Merch Logo" loading="lazy"></div>
-        <div class="client-logo"><img height="80px" width="80px" src="assets/clients-logo/zee.png" alt="Zyrous Logo" loading="lazy"></div>
-        <div class="client-logo white-bg"><img width="558px" height ="78px" src="assets/clients-logo/the-furniture-shack.webp" alt="The Furniture shack logo" loading="lazy"></div>
-        </div>
-    </section>
-
-    <!-- our clients section ends here -->
-
     <!-- contact us section starts here -->
 
     <section class="contact-section" id="contact">
@@ -811,14 +814,14 @@
     </section>
 
     <!-- contact us section ends here -->
-    <!-- footer section starts here -->
-    <footer>
-        <div class="footer-heading">
-            <p>© 2025 Design Gravitas All rights reserved.</p>
-        </div>
-    </footer>
-    <!-- footer section ends here -->
   </main>
+  <!-- footer section starts here -->
+  <footer>
+    <div class="footer-heading">
+        <p>© 2025 Design Gravitas All rights reserved.</p>
+    </div>
+</footer>
+<!-- footer section ends here -->
   <script>
     let menuOpenButton = document.querySelector(".menu-open-button");
     let menuCloseButton = document.querySelector(".menu-close-button");
@@ -840,13 +843,12 @@
             if (entry.isIntersecting) {
                 entry.target.classList.add("show");
                 if(entry.target.classList.contains("logos-container")) {
-                console.log(entry.target.className);
                 let list = entry.target;
                 const speed = 1;
                 
                 
                 function scrollAnimation() {
-                    list.scrollLeft += speed;
+                    list.scrollLeft += 1;
                     const firstItem = list.children[0];
                     const gap = parseInt(getComputedStyle(list).gap);
                     const marginRight = parseInt(getComputedStyle(firstItem).marginRight);
@@ -859,7 +861,8 @@
                     
                 }
                 
-                scrollAnimation();
+                setTimeout(scrollAnimation, 1000);
+                observer.unobserve(entry.target);
             }
             }
         });

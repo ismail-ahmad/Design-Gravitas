@@ -283,7 +283,7 @@ footer{
     .our-clients{
         min-height: 370px;
         height: 80vh;
-        justify-content: center;
+        justify-content: flex-start;
     }
     .our-clients .our-clients-heading{
         background-color: var(--dark-theme-background-color);
