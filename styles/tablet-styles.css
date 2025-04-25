@@ -227,4 +227,6 @@ section.contact-section .contact-container{
         flex-flow: row nowrap;
         gap: 50px;
         height: 200px;
+        background-image: linear-gradient(to bottom, rgba(30, 143, 255, 0.2), transparent 30%),
+        linear-gradient(to top, rgba(30, 143, 255, 0.2), transparent 30%);
     }
