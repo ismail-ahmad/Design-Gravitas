@@ -47,7 +47,7 @@ header{
   }
   .cta-button{
     color: var(--white);
-    background-color: var(--corel-red);
+    background-color: var(--bg-color-cta);
     border: none;
     padding: 4px 16px;
     font-family: inherit;
@@ -59,19 +59,9 @@ header{
   }
   .cta-button:hover{
     transform: translate(-4px, -4px);
-    box-shadow: 4px 4px 0 hsla(14, 70%, 50%, 0.6);
-  }
-  .cta-button:active{
-    transform: translate(0, 0);
-    transition: 0.1s;
-    box-shadow: 1px 1px 0 hsla(14, 70%, 50%, 0.6);
-  }
-
-  .button-container .hero-cta:hover{
-    transform: translate(-4px, -4px);
     box-shadow: 4px 4px 0 hsla(210, 100%, 45%, 0.65);
   }
-  .button-container .hero-cta:active{
+  .cta-button:active{
     transform: translate(0, 0);
     transition: 0.1s;
     box-shadow: 1px 1px 0 hsla(210, 100%, 45%, 0.65);
