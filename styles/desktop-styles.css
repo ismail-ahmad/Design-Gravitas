@@ -280,8 +280,9 @@ footer{
     }
     .logos-container{
         flex-flow: row nowrap;
-        gap: 250px;
-        height: 200px;
+        gap: 150px;
+        height: initial;
+        padding: 8px 0;
         background-image: linear-gradient(to bottom, rgba(30, 143, 255, 0.2), transparent 30%),
         linear-gradient(to top, rgba(30, 143, 255, 0.2), transparent 30%);
     }
