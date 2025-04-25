@@ -1,5 +1,5 @@
 let list = document.querySelector(".logos-container");
-const speed = 2;
+const speed = 1;
 
 
 function scrollAnimation() {
