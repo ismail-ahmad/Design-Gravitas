@@ -410,6 +410,8 @@
       align-items: center;
       padding: 0 8px 0 0;
       height: 55px;
+      opacity: 0;
+      transition: opacity 500ms;
     }
     .cta-button-container{
       display: none;
@@ -436,7 +438,8 @@
       background-color: transparent;
       backdrop-filter: var(--hero-backdrop-filter);
       opacity: 0;
-      transition: opacity 1s;
+      transition: 700ms all 200ms;
+      transform: translateY(100%);
     }
     .hero-section .hero-list{
       width: calc(100vw/12*10 - 32px );
@@ -884,7 +887,10 @@
         });
     });
     window.addEventListener("load", () => {
-      document.querySelector(".hero-container").style.opacity = "1";
+      document.querySelectorAll(".hero-container, .header").forEach((el) => {
+        el.style.opacity = "1";
+      });
+      document.querySelector(".hero-container").style.transform = "translateY(0)";
     });
   </script>
 </body>
