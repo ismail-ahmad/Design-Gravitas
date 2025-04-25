@@ -888,14 +888,21 @@
         });
     });
     window.addEventListener("load", () => {
-      document.querySelectorAll(".hero-container, .hero-list-first, .hero-list-second, .hero-list-third, .hero-text, .h1, .hero-cta").forEach((el) => {
+      document.querySelectorAll(".hero-container, .hero-list-first, .hero-list-second, .hero-list-third, .hero-text, .h1").forEach((el) => {
         el.style.opacity = "1";
         el.style.transform = "translateY(0)";
       });
-      // document.querySelectorAll(".hero-list-first, .hero-list-second, .hero-list-third, .hero-text, .h1").forEach(el => {
-        
-      // });
+      document.querySelector(".hero-cta").style.opacity = "initial";
     });
+    /* Fix for .hero-cta drop-shadow issue starts here*/
+
+
+    setTimeout(() => {
+      document.querySelector(".hero-cta").style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
+    }, 1500);
+
+    
+    /* Fix for .hero-cta drop-shadow issue ends here*/
   </script>
 </body>
 

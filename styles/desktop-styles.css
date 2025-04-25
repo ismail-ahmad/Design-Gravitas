@@ -128,7 +128,7 @@ header{
     margin: 0 0 ;
     padding: 4px;
     opacity: 0;
-    transition: 300ms opacity 1200ms;
+    transition: 300ms opacity 1200ms, shadow 0s, transform 0.3s ease;
   }
   .hero-container h1{
     font-size: var(--h1-font-size);
