@@ -435,6 +435,8 @@
       padding-bottom: 100px;
       background-color: transparent;
       backdrop-filter: var(--hero-backdrop-filter);
+      opacity: 0;
+      transition: opacity 1s;
     }
     .hero-section .hero-list{
       width: calc(100vw/12*10 - 32px );
@@ -880,6 +882,9 @@
                 target.scrollIntoView({behavior: "smooth"})
             }
         });
+    });
+    window.addEventListener("load", () => {
+      document.querySelector(".hero-container").style.opacity = "1";
     });
   </script>
 </body>
