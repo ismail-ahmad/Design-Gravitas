@@ -12,10 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => console.log('MongoDB connected'))
+mongoose.connect(process.env.MONGODB_URI, ).then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('MongoDB error:', err));
 
 // Schema
