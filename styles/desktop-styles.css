@@ -270,11 +270,18 @@ footer{
 
     .our-clients{
         min-height: 370px;
-        height: 50vh;
-        justify-content: space-evenly;
+        height: 80vh;
+        justify-content: center;
+    }
+    .our-clients .our-clients-heading{
+        background-color: var(--dark-theme-background-color);
+        width: 100%;
+        text-align: center;
     }
     .logos-container{
         flex-flow: row nowrap;
-        gap: 150px;
+        gap: 250px;
         height: 200px;
+        background-image: linear-gradient(to bottom, rgba(30, 143, 255, 0.2), transparent 30%),
+        linear-gradient(to top, rgba(30, 143, 255, 0.2), transparent 30%);
     }
