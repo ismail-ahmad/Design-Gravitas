@@ -282,7 +282,7 @@ footer{
 
     .our-clients{
         min-height: 370px;
-        height: 80vh;
+        height: 45vh;
         justify-content: flex-start;
     }
     .our-clients .our-clients-heading{
