@@ -899,12 +899,13 @@
     let observer = new IntersectionObserver( (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                if(!entry.target.classList.contains("card")) {
+                if(!entry.target.classList.contains("card") && entry.intersectionRatio > 0.1) {
                   entry.target.classList.add("show");
                 }
                 if(entry.intersectionRatio === 1 && entry.target.classList.contains("card")) {
-                    entry.target.classList.add("mobile-hover");
-                    console.log("working!");
+                    let timeout = setTimeout(() => {
+                      entry.target.classList.add("mobile-hover");
+                    }, 1000);
                 }
                  if(entry.target.classList.contains("logos-container")) {
                 let list = entry.target;
