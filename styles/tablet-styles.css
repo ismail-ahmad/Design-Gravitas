@@ -235,6 +235,10 @@ section.contact-section .contact-container{
       left: 50%;
       transform: translateX(-50%);
       backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      -o-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
       transition: opacity 0.6s;
     }
 
