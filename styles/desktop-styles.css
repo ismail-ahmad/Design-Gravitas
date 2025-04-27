@@ -260,6 +260,20 @@ footer{
     .flip{
       transform: rotateY(180deg);
     }
+    .wcu-card:hover .card::after{
+      opacity: 1;
+    }
+    .card::after{
+      content: '(Click to Reveal)';
+      color: rgba(255, 255, 255, 0.4);
+      opacity: 0;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      backface-visibility: hidden;
+      transition: opacity 0.6s;
+    }
     @media only screen and (max-width:975px) {
       .wcu-card{
         height: 70vh;
@@ -270,24 +284,6 @@ footer{
         height: 90vh;
       }
     }
-    /* .wcu-card:nth-child(1){
-        border-radius: 0 0 40px 0;
-    }
-    .wcu-card:nth-child(2){
-        border-radius: 0 0 40px 40px;
-    }
-    .wcu-card:nth-child(3){
-        border-radius: 0 0 0 40px;
-    }
-    .wcu-card:nth-child(4){
-        border-radius: 0 40px 0 0;
-    }
-    .wcu-card:nth-child(5){
-        border-radius: 40px 40px 0 0;
-    }
-    .wcu-card:nth-child(6){
-        border-radius: 40px 0 0 0;
-    } */
 
     .our-clients{
         min-height: 370px;

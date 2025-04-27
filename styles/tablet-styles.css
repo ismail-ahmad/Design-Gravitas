@@ -219,9 +219,20 @@ section.contact-section .contact-container{
         padding-bottom: 0;
     }
 
-    .mobile-hover{
+    .flip{
       transform: rotateY(180deg);
       transition: all 1s;
+    }
+    .card::after{
+      content: '(Tap to Reveal)';
+      color: rgba(255, 255, 255, 0.589);
+      opacity: 1;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      backface-visibility: hidden;
+      transition: opacity 0.6s;
     }
 
 
