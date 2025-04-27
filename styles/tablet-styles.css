@@ -205,13 +205,12 @@ section.contact-section .contact-container{
         padding: 68px 0; /*160px*/
     }
     .wcu-card{
-        height: 65vh;
+        height: 45vh;
         justify-content: space-evenly;
         width: calc(100vw/12*6 - 32px);
         margin: 0;
         font-size: var(--body-text);
-        min-height: 610px;
-        padding: 0 32px;
+        min-height: 310px;
     }
     .wcu-card p{}
 
