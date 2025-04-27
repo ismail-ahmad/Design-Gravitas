@@ -400,23 +400,23 @@
       align-items: center;
     }
     .nav-menu{
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      width: 70%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: var(--dark-theme-background-color);
-      transform: translateX(145%);
-      z-index: 990;
-      transition: transform 0.3s ease;
-    }
-    .nav-menu-open{
-      transform: translateX(45%);
-    }
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--dark-theme-background-color);
+    transform: translateX(100%);
+    z-index: 990;
+    transition: all 0.3s ease;
+  }
+  .nav-menu-open{
+    transform: translateX(0);
+  }
     .menu-open-button{
       display: block;
     }
