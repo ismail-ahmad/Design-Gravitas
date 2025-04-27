@@ -213,30 +213,18 @@ section.contact-section .contact-container{
         min-height: 610px;
         padding: 0 32px;
     }
-    main{
-      overflow: visible;
-    }
-    body{
-      overflow: visible;
-    }
-    .wcu-cards-list, .why-choose-us-section, .wcu-card {
-      height: auto;
-      min-height: auto;
-      max-height: none;
-    }
-    .wcu-cards-list,
-.wcu-card,
-.card-container {
-  overflow: visible;
-  height: auto;
-  min-height: auto;
-  max-height: none;
-}
+    .wcu-card p{}
 
     .wcu-card ul{
         height: initial;
         padding-bottom: 0;
     }
+
+    .mobile-hover{
+      transform: rotateY(180deg);
+      transition: all 1s;
+    }
+
 
     /* tablet styles for wcu section ends here*/
 
