@@ -213,14 +213,25 @@ section.contact-section .contact-container{
         min-height: 610px;
         padding: 0 32px;
     }
-
-    .wcu-card:nth-child(even){
-        border-radius: 40px 0 0 40px;
+    main{
+      overflow: visible;
     }
-    .wcu-card:nth-child(odd){
-        border-radius: 0 40px 40px 0;
+    body{
+      overflow: visible;
     }
-    .wcu-card p{}
+    .wcu-cards-list, .why-choose-us-section, .wcu-card {
+      height: auto;
+      min-height: auto;
+      max-height: none;
+    }
+    .wcu-cards-list,
+.wcu-card,
+.card-container {
+  overflow: visible;
+  height: auto;
+  min-height: auto;
+  max-height: none;
+}
 
     .wcu-card ul{
         height: initial;

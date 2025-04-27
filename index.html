@@ -266,31 +266,63 @@
         text-decoration: 1px underline;
         text-underline-offset: 3px;
     }
-    .wcu-card p{
+    /* .wcu-card p{
         height: 96px;
-    }
+    } */
     .wcu-card{
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         gap: 50px;
         align-items: center;
-        padding: 0 16px;
-        opacity: 0;
-        transform: translateX(-80%);
-        border: 3px solid rgba(30, 143, 255, 0.499);
-        box-shadow: 3px 3px 5px rgba(30, 143, 255, 0.499),
-        -3px -3px 5px rgba(30, 143, 255, 0.499);
     }
 
     .wcu-card ul{
         list-style-image: url('/assets/checkmark.svg');
         list-style-position: outside;
-        padding: 0 0 100px 0;
-        height: 256px;
     }
     .wcu-card li{
-        padding: 0 0 16px 0;
+        padding: 4px 0;
+    }
+
+     .card-container {
+      perspective: 1000px;
+      overflow: visible;
+    }
+
+    .card {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(30, 143, 255, 0.499);
+      border-radius: 20px;
+      overflow: visible;
+    }
+
+    .wcu-card:hover .card {
+      border: 3px solid rgba(30, 143, 255, 0.499);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+    }
+
+    .card-back{
+      transform: rotateY(180deg);
+    } 
+    .card-back ul{
+      padding: 0 16px 0 40px;
     }
 
     /* Common styles for wcu section ends here*/
@@ -439,7 +471,7 @@
       backdrop-filter: var(--hero-backdrop-filter);
       opacity: 0;
       transition: 700ms all;
-      transform: translateY(100%);
+      transform: translateY(10%);
     }
     .hero-section .hero-list{
       width: calc(100vw/12*10 - 32px );
@@ -506,7 +538,6 @@
         text-align: left;
         font-family: var(--body-text);
         font-size: var(--body-font-size);
-        text-align: justify;
     }
     .contact-banner{
         width: 100%;
@@ -533,40 +564,18 @@
         padding: 68px 0;
     }
     .wcu-card{
-        height: calc(100vh - 160px);
+        aspect-ratio: 1/1;
         justify-content: space-evenly;
-        min-height: 600px;
+        /* min-height: 600px; */
         font-size: var(--body-font-size);
         margin: 0 16px;
     }
     .wcu-card:first-child{
-        height: calc(100vh - 160px);
-    }
-    .wcu-card:first-child p{
-        height: initial;
-    }
-    .wcu-card:first-child ul{
-        padding-bottom: 0;
-        padding-bottom: 16px;
-    }
-    .wcu-card p{
-        width: 75vw;
-        height: 144px;
-    }
-    .wcu-card h3{
-        padding-top: 50px;
+        /* height: calc(100vh - 160px); */
     }
     .wcu-card ul{
         width: 75vw;
         height: initial;
-        padding-bottom: 100px;
-    }
-
-    .wcu-card:nth-child(even){
-        border-radius: 40px 0;
-    }
-    .wcu-card:nth-child(odd){
-        border-radius: 0 40px;
     }
 
     .our-clients{
@@ -604,6 +613,10 @@
     opacity: 1;
     transform: translateX(0);
     transition: all 500ms;
+    }
+    .mobile-hover{
+      transform: rotateY(180deg);
+      transition: all 1s;
     }
     
     }
@@ -737,66 +750,96 @@
     <section class="why-choose-us-section">
         <h2 class="wcu-heading">Why choose us</h2>
         <div class="wcu-cards-list">
-            <div class="wcu-card">
-                <h3 class="wcu-card-heading">Expertise and Experience</h3>
-                <p>With years of hands-on experience in web design and development, we've mastered the craft of creating successful digital solutions. Our proven expertise includes:</p>
-                <ul>
+          <div class="wcu-card card-container">
+            <div class="card" id="flipCard">
+              <div class="card-face card-front">
+                <h3 class="wcu-card-heading card-front">Expertise &amp;<br> Experience</h3>
+              </div>
+              <div class="card-face card-back">
+                  <ul>
                     <li>100% Success Score on the top freelance platform <a href="https://www.upwork.com/freelancers/googleindexingexpert" style="color: white;">UpWork</a></li>
-                    <li>Top Rated developers with verified skills in today’s top tech stacks</li>
-                    <li>Years of hands-on experience across diverse industries and project types</li>
-                    <li>Continuous upskilling to stay ahead in the fast-evolving tech landscape</li>
-                </ul>
+                  <li>Top Rated developers with verified skills in today’s top tech stacks</li>
+                  <li>Years of hands-on experience across diverse industries and project types</li>
+                  <li>Continuous upskilling to stay ahead in the fast-evolving tech landscape</li>
+                  </ul>
+              </div>
             </div>
-            <div class="wcu-card">
-                <h3 class="wcu-card-heading">Results-oriented Approach</h3>
-                <p>A stunning design means nothing if it doesn’t perform. Our strategies are built around delivering real business outcomes</p>
+          </div>
+          <div class="wcu-card card-container">
+            <div class="card" id="flipCard">
+              <div class="card-face card-front">
+                <h3 class="wcu-card-heading card-front">Results-oriented Approach</h3>
+              </div>
+                <div class="card-face card-back">
                 <ul>
                     <li> We focus on conversions, not just pretty designs</li>
                     <li>SEO-optimized, mobile-first design as default</li>
                     <li>Built with performance, speed, and accessibility in mind</li>
                     <li>Analytics-ready integration to track success from day one</li>
                 </ul>
+                </div>
             </div>
-            <div class="wcu-card">
-                <h3 class="wcu-card-heading">Custom Solutions</h3>
-                <p>We create designs that reflect your brand’s identity, from fonts to functionality. Every pixel, line of code, and interaction is crafted to support your goals and speak your brand’s voice.</p>
+          </div>
+          <div class="wcu-card card-container">
+            <div class="card" id="flipCard">
+              <div class="card-face card-front">
+                <h3 class="wcu-card-heading card-front">Custom Solutions</h3>
+              </div>
+                <div class="card-face card-back">
                 <ul>
                     <li>Tailored solutions</li>
                     <li>Designs aligned with your vision, industry, and audience</li>
                     <li>Fully customizable features and layout flexibility</li>
                     <li>Collaborative process with regular design reviews</li>
                 </ul>
+                </div>
             </div>
-            <div class="wcu-card">
-                <h3 class="wcu-card-heading">End-to-End Services</h3>
-                <p>We believe you shouldn't have to juggle multiple vendors. We offer a complete, hassle-free solution from discovery, design, development to deployment and beyond.</p>
+          </div>
+          <div class="wcu-card card-container">
+            <div class="card" id="flipCard">
+              <div class="card-face card-front">
+                <h3 class="wcu-card-heading card-front">End-to-End Services</h3>
+              </div>
+                <div class="card-face card-back">
                 <ul>
                     <li>From concept to launch and beyond</li>
                     <li>Design, development, hosting, and ongoing support</li>
                     <li>UX/UI design, frontend & backend dev, CMS setup, and more</li>
                     <li>Optional maintenance & upgrade plans to keep your site sharp</li>
                 </ul>
+                </div>
             </div>
-            <div class="wcu-card">
-                <h3 class="wcu-card-heading">Client-focused partnership</h3>
-                <p>We treat your project like it’s our own. You'll always know what's happening, what’s next, and who to talk to because partnership is at the heart of our process.</p>
+            </div>
+            <div class="wcu-card card-container">
+              <div class="card" id="flipCard">
+                <div class="card-face card-front">
+                  <h3 class="wcu-card-heading card-front">Client-focused partnership</h3>
+                </div>
+                <div class="card-face card-back">
                 <ul>
                     <li>24/7 customer support and quick turnaround on queries</li>
                     <li>Clear, consistent communication throughout the project</li>
                     <li>Weekly updates, milestone check-ins, and post-launch support</li>
                 </ul>
+                </div>
             </div>
-            <div class="wcu-card">
-                <h3 class="wcu-card-heading">On time, Everytime</h3>
-                <p>Deadlines are sacred to us. With smart project management and proven systems, we make sure your launch date is more than a target</p>
+            </div>
+            <div class="wcu-card card-container">
+              <div class="card" id="flipCard">
+                <div class="card-face card-front">
+                  <h3 class="wcu-card-heading card-front">On time, Everytime</h3>
+                </div>
+                <div class="card-face card-back">
                 <ul>
                     <li>Trackable milestones from start to finish</li>
                     <li>Reliable timelines with built-in buffer for peace of mind</li>
                     <li>100% on-time delivery record across past projects</li>
                 </ul>
+                </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
 
     <!-- Why choose us section ends here -->
@@ -836,15 +879,30 @@
     };
     menuOpenButton.addEventListener("click", () => {toggle(true)});
     menuCloseButton.addEventListener("click", () => {toggle(false)});
+    function getThreshold() {
+      let threshold = [];
+      let low = 0;
+      let high = 100;
+      for(let i = low; i <= high; i++) {
+        const ratio = i/high;
+        threshold.push(ratio);
+      }
+      return threshold;
+    }
     let options = {
         root: null,
-        threshold: 0.1,
+        threshold: getThreshold(),
     };
     let observer = new IntersectionObserver( (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-                if(entry.target.classList.contains("logos-container")) {
+                if(!entry.target.classList.contains("card")) {
+                  entry.target.classList.add("show");
+                }
+                if(entry.intersectionRatio === 1 && entry.target.classList.contains("card")) {
+                    entry.target.classList.add("mobile-hover");
+                }
+                 if(entry.target.classList.contains("logos-container")) {
                 let list = entry.target;
                 const speed = 1;
                 
@@ -867,9 +925,14 @@
                 observer.unobserve(entry.target);
             }
             }
+            if(!entry.isIntersecting) {
+              if(entry.intersectionRatio === 0 && entry.target.classList.contains("card")) {
+                    entry.target.classList.remove("mobile-hover");
+                }
+            }
         });
     }, options);
-    document.querySelectorAll(".contact-container, .service-container, .wcu-card, .logos-container").forEach((el) => {
+    document.querySelectorAll(".contact-container, .service-container, .card, .logos-container").forEach((el) => {
         observer.observe(el);
     });
     document.querySelectorAll(".contact-banner").forEach((el) => {
@@ -905,6 +968,17 @@
 
     
     /* Fix for .hero-cta drop-shadow issue ends here*/
+
+    const card = document.querySelectorAll('.card');
+    card.forEach(el => {
+      el.addEventListener('click', () => {
+      el.classList.add('flip');
+    });
+    el.addEventListener("mouseleave", () => {
+      el.classList.remove('flip');
+    });
+    });
+
   </script>
 </body>
 

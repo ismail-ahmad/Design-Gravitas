@@ -254,14 +254,23 @@ footer{
     }
     .wcu-card{
         width: calc(100vw/12*4 - 64px);
-        min-height: 650px;
         justify-content: space-evenly;
-        height: 80vh;
-        padding: 0 48px;
-        border-radius: 40px;
-        overflow: hidden;
+        height: 350px;
     }
-    .wcu-card:nth-child(1){
+    .flip{
+      transform: rotateY(180deg);
+    }
+    @media only screen and (max-width:975px) {
+      .wcu-card{
+        height: 70vh;
+      }
+    }
+    @media only screen and (max-width:850px) {
+      .wcu-card{
+        height: 90vh;
+      }
+    }
+    /* .wcu-card:nth-child(1){
         border-radius: 0 0 40px 0;
     }
     .wcu-card:nth-child(2){
@@ -278,7 +287,7 @@ footer{
     }
     .wcu-card:nth-child(6){
         border-radius: 40px 0 0 0;
-    }
+    } */
 
     .our-clients{
         min-height: 370px;
