@@ -405,17 +405,17 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      width: 100%;
+      width: 70%;
       position: fixed;
       top: 0;
       left: 0;
       background-color: var(--dark-theme-background-color);
-      transform: translateX(100%);
+      transform: translateX(145%);
       z-index: 990;
       transition: transform 0.3s ease;
     }
     .nav-menu-open{
-      transform: translateX(0);
+      transform: translateX(45%);
     }
     .menu-open-button{
       display: block;
@@ -423,12 +423,16 @@
     .menu-close-button{
       display: none;
       position: absolute;
-      right: 8px;
-      top: 13px;
+      left: 0;
+      top: 0;
     }
     .menu-close-button-visible{
       display: block;
-      z-index: 1000;
+      width: 100vw;
+      height: 100vh;
+      background-color: transparent;
+      backdrop-filter: blur(10px);
+      z-index: 800;
     }
     .no-scroll{
       height: 100%;
@@ -646,7 +650,7 @@
             </p>
           </div>
     </a>
-    <svg class ="menu-close-button" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="white"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+    <div class="menu-close-button"></div>
     <nav class="nav-menu">      
       <ul>
         <li><a href="/">Home</a></li>
@@ -871,6 +875,10 @@
 </footer>
 <!-- footer section ends here -->
   <script>
+
+    // Nav Menu toggling behavior starts here
+
+
     let menuOpenButton = document.querySelector(".menu-open-button");
     let menuCloseButton = document.querySelector(".menu-close-button");
     let html = document.querySelector("html");
@@ -882,6 +890,11 @@
     };
     menuOpenButton.addEventListener("click", () => {toggle(true)});
     menuCloseButton.addEventListener("click", () => {toggle(false)});
+
+
+    // Nav Menu toggling behavior ends here
+
+
     function getThreshold() {
       let threshold = [];
       let low = 0;
