@@ -474,7 +474,7 @@
       padding: 0 16px;
       height: 100%;
       justify-content: space-evenly;
-      padding-bottom: 100px;
+      padding-bottom: 50px;
       background-color: transparent;
       backdrop-filter: var(--hero-backdrop-filter);
       opacity: 0;
@@ -560,20 +560,26 @@
 
     /* Intersection styles ends here */
 
+    .why-choose-us-section{
+      width: 100%;
+    }
+
 
     .why-choose-us-section .wcu-cards-list{
         flex-flow: column nowrap;
         gap: 16px;
+        width: 100vw;
     }
     .wcu-heading{
         padding: 68px 0;
     }
     .wcu-card{
+        width: calc(100vw - 32px);
         aspect-ratio: 1/1;
         justify-content: space-evenly;
-        /* min-height: 600px; */
         font-size: var(--body-font-size);
-        margin: 0 16px;
+        margin-left: 16px;
+        margin-right: 16px;
     }
     .wcu-card:first-child{
         /* height: calc(100vh - 160px); */
