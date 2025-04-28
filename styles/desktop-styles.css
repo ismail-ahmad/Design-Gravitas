@@ -267,7 +267,9 @@ footer{
       content: '(Click to Reveal)';
       color: rgba(255, 255, 255, 0.4);
       opacity: 0;
+      text-align: center;
       position: absolute;
+      width: 100%;
       top: 60%;
       left: 50%;
       transform: translateX(-50%);
