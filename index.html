@@ -277,6 +277,16 @@
         align-items: center;
     }
 
+    @-moz-document url-prefix() {
+      /* Fix for Firefox backface-visibility issue */
+      .card-face.card-back {
+        transform: rotateY(180deg) translateZ(1px);
+      }
+      .card-face.card-front {
+        transform: rotateY(0deg) translateZ(0px);
+      }
+    }
+
     .wcu-card ul{
         list-style-image: url('/assets/checkmark.svg');
         list-style-position: outside;
@@ -1011,27 +1021,6 @@
       el.classList.remove('flip');
     });
     });
-    // Detect Firefox browser
-const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-
-// Only apply fixes if we're in Firefox
-if (isFirefox) {
-  // Create a minimal style fix
-  const style = document.createElement('style');
-  style.textContent = `
-    @-moz-document url-prefix() {
-      /* Fix for Firefox backface-visibility issue */
-      .card-face.card-back {
-        transform: rotateY(180deg) translateZ(1px);
-      }
-      
-      .card-face.card-front {
-        transform: rotateY(0deg) translateZ(0px);
-      }
-    }
-  `;
-  document.head.appendChild(style);
-}
   </script>
 </body>
 
