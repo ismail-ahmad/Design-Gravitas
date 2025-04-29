@@ -288,7 +288,7 @@
     }
 
     .wcu-card ul{
-        list-style-image: url('/assets/checkmark.svg');
+        list-style-image: url('assets/checkmark.svg');
         list-style-position: outside;
     }
     .wcu-card li{
@@ -314,10 +314,6 @@
       border: 1px solid rgba(30, 143, 255, 0.499);
       border-radius: 20px;
       overflow: visible;
-    }
-
-    .wcu-card:hover .card {
-      border: 3px solid rgba(30, 143, 255, 0.499);
     }
     .card-face {
       position: absolute;
@@ -1011,20 +1007,21 @@
 
     
     /* Fix for .hero-cta drop-shadow issue ends here*/
-    let hasMouseEntered = false;
-    const card = document.querySelectorAll('.card');
-    card.forEach(el => {
-      if(el.addEventListener("mouseenter", () => {
-        hasMouseEntered = true;
-        if(hasMouseEntered) {
-      el.addEventListener('click', () => {
-      el.classList.add('flip');
-    });
-      }
-      }));
-    el.addEventListener("mouseleave", () => {
-      el.classList.remove('flip');
-    });
+    const wcuCard = document.querySelectorAll('.wcu-card');
+    wcuCard.forEach(el => {
+      let card = el.querySelector("card");
+      el.addEventListener("mouseenter", e => {
+        e.currentTarget.querySelector(".card").style.border = "3px solid rgba(30, 143, 255, 0.499)";
+      });
+      el.addEventListener("mouseleave", e => {
+        e.currentTarget.querySelector(".card").style.border = "1px solid rgba(30, 143, 255, 0.499)";
+        e.currentTarget.querySelector(".card").classList.remove("flip");
+      });
+      el.addEventListener("click", e => {
+        if(e.currentTarget.matches(":hover")){
+          e.currentTarget.querySelector(".card").classList.toggle("flip");
+        }
+      });
     });
   </script>
 </body>
