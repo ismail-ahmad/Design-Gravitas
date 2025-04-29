@@ -279,11 +279,11 @@
 
     @-moz-document url-prefix() {
       /* Fix for Firefox backface-visibility issue */
-      .card-face.card-back {
+      .card-back {
         transform: rotateY(180deg) translateZ(1px);
       }
-      .card-face.card-front {
-        transform: rotateY(0deg) translateZ(0px);
+      .card-front {
+        transform: rotateY(0) translateZ(0);
       }
     }
 
@@ -1011,12 +1011,17 @@
 
     
     /* Fix for .hero-cta drop-shadow issue ends here*/
-
+    let hasMouseEntered = false;
     const card = document.querySelectorAll('.card');
     card.forEach(el => {
+      if(el.addEventListener("mouseenter", () => {
+        hasMouseEntered = true;
+        if(hasMouseEntered) {
       el.addEventListener('click', () => {
       el.classList.add('flip');
     });
+      }
+      }));
     el.addEventListener("mouseleave", () => {
       el.classList.remove('flip');
     });
